@@ -1,0 +1,155 @@
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+
+html,*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header{
+    padding: 10px;
+    display: flex;
+    background-color: darkgray;
+/*     flex-direction: row;
+ */  
+flex-wrap: wrap;
+}
+.Hchild{
+/*     border: 2px solid black;
+ */    padding: 5px;
+}
+.logo{
+    flex: 50%;
+    padding: 10px;
+}
+.logoPC{
+    height: 100%;
+    width: 70%;
+    padding: 65px;
+    background-image:url(./img/logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+@media (max-width: 800px) {
+    .logoPC {
+      width: 100%;
+    }
+  }
+
+  @media(max-width: 800px){
+    .users,.logo{
+        flex: 100%;
+    }
+}
+.users{
+    flex: 50%;
+    padding: 10px;
+}
+.userChild{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-flow:row-reverse;
+}
+/* .navbar{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.search{
+    padding: 20px;
+    flex: 25%;
+    border: 1px solid black; 
+
+}
+.mynav{
+     padding: 20px;
+    border: 1px solid black; 
+    flex: 75%;
+} */
+.main{
+    display: grid;
+    grid-template-columns: 16% auto;
+}
+.sidebar{
+padding: auto;
+}
+@media only screen and (max-width:600px){
+    .sidebar
+    {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+
+      width:calc(100vw - 340px) ;   
+    }
+
+}
+.content{
+padding: auto;
+overflow: visible;
+border: 2.5px solid rgb(145, 145, 145);
+border-radius: 5px;
+box-sizing: border-box;
+box-shadow: whitesmoke;
+}
+@media only screen and (max-width:600px){
+    .content
+    {
+        display: flex;
+        flex-direction: column;
+        width:calc(100vw - 172px) ;   
+        margin-left: 81.5px;
+
+    }
+
+}
+.SNavbar{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: rgb(51, 45, 45);
+    justify-content:flex-start;
+    padding-left: 10px;
+    
+}
+.NavChild{
+/* 
+text-align: center; */
+}
+
+.NavChild a{
+    text-align: center;
+    color: rgb(199, 199, 199);
+    line-height: 2.5rem;
+    text-decoration: none;
+    font-style:normal;
+    height: 24px;
+    margin-left: 20px;
+}
+.NavChild a:hover{
+   
+    padding-left: 3px;
+    border-right: 5px solid rgb(194, 193, 193);
+}
+.navIcon{
+    color: white;
+}
+.footer{
+    background-color: rgb(144, 144, 145);
+    padding: 30px;
+    height: 500px;
+}
